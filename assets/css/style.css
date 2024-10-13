@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #264653;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+small {
+  font-style: italic;
+  color: #2a9d8f;
+}
+
+.busqueda {
+  background-color: #2a9d8f;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.busqueda select {
+  width: 100%;
+  height: 2rem;
+  border-radius: 0.5rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  background-color: #264653;
+  grid-area: navbar;
+  min-height: 10.4vh;
+  text-align: center;
+}
+
+aside {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #f4a261;
+  grid-area: sidebar;
+  min-height: 70vh;
+}
+
+aside h2 {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  text-align: center;
+  width: 70%;
+}
+
+.box {
+  margin-top: 0.5rem;
+}
+
+.box h4 {
+  padding: 1rem;
+  background-color: #fff;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+.box h4:hover {
+  background-color: #264653;
+  color: #fff;
+  font-style: italic;
+}
+
+main {
+  grid-area: contenido;
+  background-color: #fff;
+}
+
+.grid-layout {
+  padding: 1rem;
+  display: grid;
+  overflow: scroll;
+  gap: 10px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #e76f51;
+  border-radius: 1rem;
+}
+
+.grid-item img {
+  width: auto;
+  height: 20rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.grid-item h2 {
+  color: #e76f51;
+  font-size: 1.3rem;
+}
+
+.grid-item button {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #e76f51;
+  border: none;
+  border-radius: 0 0 1rem 1rem;
+  margin-top: 1.6rem;
+  font-size: 1.2rem;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #fff;
+}
+
+.grid-item button:hover {
+  background-color: #f4a261;
+  color: black;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.page ul {
+  display: flex;
+  justify-content: center;
+}
+
+.page li {
+  border: 1px solid #e76f51;
+  border-radius: 1rem;
+  width: 1rem;
+  padding: 1rem;
+  text-align: center;
+  list-style-type: none;
+  margin: 0.1rem;
+}
+
+.page li:hover {
+  color: #e76f51;
+  border: 1px solid #f4a261;
+}
+
+footer {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  background-color: #264653;
+  grid-area: footer;
+  min-height: 5vh;
+}
+
+footer h4 {
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  font-style: oblique;
+  color: #e76f51;
+}
+
+footer .rrss {
+  color: #e76f51;
+  margin-bottom: 0.5rem;
+}
+
+footer .rrss i:hover {
+  color: #fff;
+}
+
+/* MEDIAS */
+
+@media (width <= 576px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  nav .menu {
+    justify-content: flex-end;
+  }
+
+  nav .menu a {
+    color: #fff;
+  }
+
+  .busqueda {
+    background-color: #e76f51;
+  }
+
+  .busqueda i,
+  h2 {
+    display: none;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "navbar"
+      "contenido"
+      "footer";
+    min-height: 100vh;
+  }
+  aside {
+    display: none;
+  }
+
+  .grid-layout {
+    grid-template: 1fr;
+    height: 40vh;
+    grid-template: 1fr / repeat (3, 1fr);
+  }
+}
+
+@media (width >= 577px) {
+  nav .menu {
+    display: none;
+  }
+
+  .layout {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 20% 80%;
+    grid-template-areas:
+      "navbar contenido"
+      "sidebar contenido"
+      "footer contenido";
+  }
+
+  .grid-layout {
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    height: 70vh;
+  }
+}
