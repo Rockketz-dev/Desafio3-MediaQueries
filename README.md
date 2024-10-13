@@ -9,7 +9,7 @@
 
 - 🔭 Actualmente estoy trabajando en mi [Curriculum Vitae](https://rockketz-dev.github.io/CV-Felipe/)
 
-- 🌱 Estoy aprendiendo **Git - Github y Bootstrap**
+- 🌱 Estoy aprendiendo **Media Queries - Flexbox**
 
 - 👨‍💻 Mis Proyectos [https://rockketz-dev.github.io/CV-Felipe/](https://rockketz-dev.github.io/CV-Felipe/)
 
